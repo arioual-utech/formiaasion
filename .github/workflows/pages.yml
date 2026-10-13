@@ -1,0 +1,60 @@
+name: Publier le site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Installer git-crypt et mkdocs
+        run: |
+          sudo apt-get update && sudo apt-get install -y git-crypt
+          pip install mkdocs mkdocs-material mkdocs-encryptcontent-plugin
+
+      - name: Déverrouiller les sessions
+        env:
+          GIT_CRYPT_KEY: ${{ secrets.GIT_CRYPT_KEY }}
+        run: |
+          test -n "$GIT_CRYPT_KEY" || { echo "secret GIT_CRYPT_KEY absent"; exit 1; }
+          echo "$GIT_CRYPT_KEY" | base64 -d > "$RUNNER_TEMP/git-crypt.key"
+          git-crypt unlock "$RUNNER_TEMP/git-crypt.key"
+          rm "$RUNNER_TEMP/git-crypt.key"
+
+      - name: Construire le site chiffré
+        env:
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
+        run: |
+          test -n "$SITE_PASSWORD" || { echo "secret SITE_PASSWORD absent : le site serait en clair"; exit 1; }
+          mkdocs build --strict
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

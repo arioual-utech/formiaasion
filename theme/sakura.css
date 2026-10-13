@@ -1,0 +1,132 @@
+/* @theme sakura */
+@import 'default';
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+
+:root {
+  --washi: #F7F1E8;
+  --washi-2: #EFE6D8;
+  --sumi: #221F1E;
+  --ai: #16263F;
+  --shu: #B7322C;
+  --sakura: #F2B8C6;
+  --sakura-pale: #FBE3E9;
+  --sakura-deep: #C95F7B;
+  --soft: #5B5450;
+}
+
+section {
+  background: var(--washi);
+  color: var(--sumi);
+  font-family: 'Zen Kaku Gothic New', 'Hiragino Sans', 'Yu Gothic', 'Segoe UI', sans-serif;
+  font-size: 28px;
+  line-height: 1.45;
+  padding: 120px 80px 90px;
+}
+
+/* branche de cerisier, coin haut droit */
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 290px;
+  height: 166px;
+  background: no-repeat right top / contain url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 320'><defs><g id='b'><ellipse cy='-15' rx='10' ry='16' fill='%23F2B8C6'/><ellipse cy='-15' rx='10' ry='16' fill='%23F2B8C6' transform='rotate(72)'/><ellipse cy='-15' rx='10' ry='16' fill='%23F2B8C6' transform='rotate(144)'/><ellipse cy='-15' rx='10' ry='16' fill='%23F2B8C6' transform='rotate(216)'/><ellipse cy='-15' rx='10' ry='16' fill='%23F2B8C6' transform='rotate(288)'/><circle r='4.5' fill='%23C95F7B'/></g></defs><path d='M560 24 C470 34 390 66 320 118 S170 232 60 262' stroke='%234A3B34' stroke-width='7' fill='none' stroke-linecap='round'/><path d='M430 52 C410 96 380 126 372 170' stroke='%234A3B34' stroke-width='5' fill='none' stroke-linecap='round'/><use href='%23b' transform='translate(500 38) scale(1.1)'/><use href='%23b' transform='translate(440 70) rotate(20) scale(.9)'/><use href='%23b' transform='translate(372 176) rotate(40)'/><use href='%23b' transform='translate(330 114) rotate(10) scale(.85)'/></svg>");
+}
+
+h1, h2, h3 {
+  font-family: 'Shippori Mincho', 'Hiragino Mincho ProN', Georgia, serif;
+  font-weight: 700;
+  color: var(--ai);
+}
+h1 { font-size: 64px; line-height: 1.1; }
+h2 { font-size: 54px; line-height: 1.1; margin-bottom: 36px; }
+h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 5px;
+  background: var(--shu);
+  margin-top: 14px;
+}
+h3 { font-size: 34px; }
+
+strong { color: var(--shu); }
+a { color: var(--ai); }
+ul li::marker, ol li::marker { color: var(--shu); font-weight: 700; }
+
+blockquote {
+  border-left: 6px solid var(--shu);
+  background: var(--washi-2);
+  padding: 8px 28px;
+  margin: 20px 0;
+  color: var(--sumi);
+}
+
+code { background: var(--sakura-pale); color: var(--ai); border-radius: 4px; padding: 0 8px; }
+pre { background: var(--ai); border: none; border-radius: 10px; padding: 24px 32px; }
+pre code { background: transparent; color: var(--washi); padding: 0; font-size: 24px; }
+
+table { font-size: 24px; border-collapse: collapse; }
+th { background: var(--ai); color: var(--washi); padding: 8px 16px; }
+td { padding: 8px 16px; border-bottom: 1px solid var(--washi-2); }
+tr:nth-child(even) td { background: var(--washi-2); }
+
+header, footer { font-size: 20px; color: var(--soft); }
+header {
+  top: 36px;
+  left: 80px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--shu);
+}
+footer { bottom: 36px; left: 80px; }
+section::after { font-size: 20px; color: var(--soft); bottom: 36px; right: 80px; }
+
+/* couverture : <!-- _class: lead --> */
+section.lead {
+  justify-content: center;
+  padding: 80px;
+}
+section.lead::before { width: 440px; height: 251px; }
+section.lead h1 { font-size: 92px; margin-bottom: 8px; }
+section.lead h1::after {
+  content: '';
+  display: block;
+  width: 110px;
+  height: 7px;
+  background: var(--shu);
+  margin-top: 22px;
+}
+section.lead code {
+  background: var(--shu);
+  color: var(--washi);
+  padding: 4px 20px;
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+/* kanji en filigrane (Marp réserve le ::after de section à la pagination) */
+section.lead {
+  background:
+    no-repeat right 70px bottom 10px / 330px 330px url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 330'><text x='165' y='265' font-size='300' font-weight='700' text-anchor='middle' fill='%23F2B8C6' fill-opacity='.5' font-family='Shippori Mincho, Yu Mincho, serif'>桜</text></svg>"),
+    var(--washi);
+}
+
+/* fond indigo : <!-- _class: dark --> */
+section.dark { background: var(--ai); color: var(--washi); }
+section.dark h1, section.dark h2, section.dark h3 { color: var(--washi); }
+section.dark h2::after { background: var(--sakura); }
+section.dark strong { color: var(--sakura); }
+section.dark header { color: var(--sakura); }
+section.dark footer, section.dark::after { color: #B9C2D0; }
+section.dark ul li::marker, section.dark ol li::marker { color: var(--sakura); }
+section.dark blockquote { background: #22385A; border-left-color: var(--sakura); color: var(--washi); }
+
+/* slide d'accent, une seule par deck : <!-- _class: accent --> */
+section.accent { background: var(--shu); color: var(--washi); justify-content: center; }
+section.accent h1, section.accent h2, section.accent h3 { color: var(--washi); }
+section.accent h2::after { background: var(--washi); }
+section.accent strong { color: var(--sakura-pale); }
+section.accent ul li::marker, section.accent ol li::marker { color: var(--washi); }
+section.accent header, section.accent footer, section.accent::after { color: var(--sakura-pale); }

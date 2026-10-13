@@ -1,0 +1,33 @@
+:root {
+  --md-primary-fg-color: #16263F;
+  --md-primary-bg-color: #F7F1E8;
+  --md-accent-fg-color: #B7322C;
+  --md-default-bg-color: #F7F1E8;
+  --md-typeset-a-color: #16263F;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: "Shippori Mincho", "Hiragino Mincho ProN", Georgia, serif;
+  color: #16263F;
+}
+
+.md-typeset h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background: #B7322C;
+  margin-top: 12px;
+}
+
+.md-typeset table:not([class]) th {
+  background: #16263F;
+  color: #F7F1E8;
+}
+
+.md-typeset blockquote {
+  border-left: 6px solid #B7322C;
+  background: #EFE6D8;
+}

@@ -1,0 +1,27 @@
+site_name: Formation IA
+site_description: Parcours de formation à l'usage de l'IA au quotidien
+docs_dir: docs
+
+theme:
+  name: material
+  language: fr
+  palette:
+    primary: custom
+    accent: custom
+  font:
+    text: Zen Kaku Gothic New
+  features:
+    - navigation.sections
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - encryptcontent:
+      # Le mot de passe vient d'une variable d'environnement (secret de CI), jamais du dépôt.
+      # Variable absente ou vide = site publié en clair : la CI refuse de builder dans ce cas.
+      global_password: !ENV SITE_PASSWORD
+      search_index: encrypted
+      title_prefix: ''
