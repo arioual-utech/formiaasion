@@ -70,7 +70,8 @@ pre code { background: transparent; color: var(--washi); padding: 0; font-size: 
 table { font-size: 24px; border-collapse: collapse; }
 th { background: var(--ai); color: var(--washi); padding: 8px 16px; }
 td { padding: 8px 16px; border-bottom: 1px solid var(--washi-2); }
-tr:nth-child(even) td { background: var(--washi-2); }
+table tr { background-color: var(--washi); }
+tr:nth-child(even) { background-color: var(--washi-2); }
 
 header, footer { font-size: 20px; color: var(--soft); }
 header {
@@ -121,6 +122,11 @@ section.dark strong { color: var(--sakura); }
 section.dark header { color: var(--sakura); }
 section.dark footer, section.dark::after { color: #B9C2D0; }
 section.dark ul li::marker, section.dark ol li::marker { color: var(--sakura); }
+section.dark table { background: transparent; }
+section.dark th { background: #0F1B30; color: var(--sakura); }
+section.dark td { background: transparent; color: var(--washi); border-bottom: 1px solid #2E4670; }
+section.dark table tr { background-color: transparent; border-top: none; }
+section.dark table tr:nth-child(even) { background-color: #1C3150; }
 section.dark blockquote { background: #22385A; border-left-color: var(--sakura); color: var(--washi); }
 
 /* slide d'accent, une seule par deck : <!-- _class: accent --> */

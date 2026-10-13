@@ -10,19 +10,20 @@ tags: [formation, prerequis]
 ---
 # Prérequis : Nom de la session
 
-> [!info] À faire **avant** la session. Compter 10 minutes. Si un point échoue, prévenir le formateur la veille.
+!!! info "À faire avant la session"
+    Compter 10 minutes. Si un point échoue, demande de l'aide à l'équipe avant la session.
 
 ## Sessions à avoir suivies
 
 - [ ] Session X : titre (apporte : ...)
 - [ ] Session Y : titre
 
-## Ce que `mon-assistant` doit contenir
+## Ce que `iaassistant` doit contenir
 
 État attendu du dépôt en arrivant (la brique de la session précédente est poussée) :
 
 ```text
-mon-assistant/
+iaassistant/
 └── ...
 ```
 
@@ -48,4 +49,4 @@ Une ligne par notion, avec un lien. Pas d'explication ici.
 
 ## En cas de problème
 
-Écrire au formateur avec : la commande lancée et le message d'erreur complet.
+Demande de l'aide à l'équipe avec : la commande lancée et le message d'erreur complet.

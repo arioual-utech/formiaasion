@@ -10,7 +10,8 @@ tags: [formation, bonus]
 ---
 # Pour aller plus loin : Nom de la session
 
-> [!info] Optionnel. Sans note, sans correction obligatoire. Compter 20 à 40 minutes.
+!!! info "Optionnel"
+    Sans note, sans correction obligatoire. Compter 20 à 40 minutes.
 
 | | |
 |---|---|
@@ -29,16 +30,16 @@ Le scénario en 3 ou 4 lignes, tiré d'un cas réel de l'équipe. Ce qu'il faut 
 
 ## Pistes
 
-> [!tip]- Indice 1 : par où commencer
-> ...
+??? tip "Indice 1 : par où commencer"
+    ...
 
-> [!tip]- Indice 2 : l'outil ou la commande clé
-> ...
+??? tip "Indice 2 : l'outil ou la commande clé"
+    ...
 
-> [!example]- Solution possible
-> ...
+??? example "Solution possible"
+    ...
 
 ## Pour creuser
 
 - Lien documentation ou fiche : ...
-- Session liée : [[../NN-nom-court/01-fiche-etudiant]]
+- Session liée : [fiche de la session](../NN-nom-court/01-fiche-etudiant.md)

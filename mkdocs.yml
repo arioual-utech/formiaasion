@@ -17,6 +17,18 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+# Les slides se présentent depuis le dépôt avec Marp : elles ne sont pas publiées.
+exclude_docs: |
+  sessions/*/02-slides.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
 plugins:
   - search
   - encryptcontent:

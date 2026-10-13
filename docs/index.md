@@ -1,6 +1,6 @@
 # Formation IA
 
-Parcours de sessions courtes pour apprendre à utiliser l'IA au quotidien, en construisant pas à pas un projet personnel, `mon-assistant`.
+Parcours de sessions courtes pour apprendre à utiliser l'IA au quotidien, en construisant pas à pas un projet personnel, `iaassistant`.
 
 ## Trois formats
 

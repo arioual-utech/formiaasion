@@ -14,8 +14,8 @@ tags: [formation, fiche-etudiant]
 |---|---|
 | **Format** | Lab · 60 min |
 | **Phase** | Phase X |
-| **Prérequis** | [[00-prerequis]] |
-| **Brique ajoutée à `mon-assistant`** | `chemin/de/la/brique` |
+| **Prérequis** | [Prérequis](00-prerequis.md) |
+| **Brique ajoutée à `iaassistant`** | `chemin/de/la/brique` |
 
 ## Objectif
 
@@ -26,11 +26,13 @@ tags: [formation, fiche-etudiant]
 | Durée       | Étape                           |
 | ----------- | ------------------------------- |
 | 5 min       | Rappel de la session précédente |
-| 10 min      | Démo par le formateur           |
+| 10 min      | Démo                            |
 | 35 à 40 min | TP (ci-dessous)                 |
 | 5 min       | Validation                      |
 
 ## Pas à pas
+
+Les commandes sont à lancer **une par une**, en vérifiant le résultat de chacune avant de passer à la suivante.
 
 ### Étape 1 : titre de l'étape
 
@@ -46,12 +48,12 @@ commande à copier
 
 ...
 
-> [!tip] Astuce
-> Un raccourci ou un piège évité.
+!!! tip "Astuce"
+    Un raccourci ou un piège évité.
 
 ## Validation
 
-Montrer au formateur (ou cocher) :
+Coche chaque ligne :
 
 - [ ] Critère observable 1 (ex. `commande` affiche ...)
 - [ ] Critère observable 2
@@ -60,9 +62,18 @@ Montrer au formateur (ou cocher) :
 ## Pousser la brique
 
 ```bash
-cd ~/mon-assistant
+cd ~/projets/iaassistant
+```
+
+```bash
 git add .
+```
+
+```bash
 git commit -m "feat: <brique de la session>"
+```
+
+```bash
 git push
 ```
 
@@ -78,4 +89,4 @@ git push
 
 ## Pour aller plus loin
 
-Exercice optionnel : [[03-pour-aller-plus-loin]]
+Exercice optionnel : [Pour aller plus loin](03-pour-aller-plus-loin.md)

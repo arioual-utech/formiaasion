@@ -24,10 +24,10 @@ tags: [formation, slides]
 `TYPE · 60 min`
 
 Phase X · Session N°
-Formateur · Date
+Date
 
 <!--
-Notes formateur : accueil, rappel du fil rouge (1 phrase).
+Notes : accueil, rappel du fil rouge (1 phrase).
 Gabarit : newsletter = titre + 3 à 6 slides ; concept = titre à "Notion" + validation ; lab = tout.
 Supprimer les slides inutiles avant la séance.
 -->
@@ -41,7 +41,7 @@ Supprimer les slides inutiles avant la séance.
 - verbe d'action 1
 - verbe d'action 2
 
-> Brique ajoutée à `mon-assistant` : `chemin/de/la/brique`
+> Brique ajoutée à `iaassistant` : `chemin/de/la/brique`
 
 <!--
 Notes : lire l'objectif à voix haute. [newsletter] : remplacer par "L'info du jour".
@@ -115,9 +115,9 @@ Noter les blocages récurrents pour la section "Si ça bloque".
 
 Montrer en 2 minutes :
 
-- [ ] Critère observable 1
-- [ ] Critère observable 2
-- [ ] Brique poussée dans le dépôt
+- ☐ Critère observable 1
+- ☐ Critère observable 2
+- ☐ Brique poussée dans le dépôt
 
 <!--
 Notes : [newsletter] l'action d'1 minute remplace cette slide. [concept] exercice oral.
