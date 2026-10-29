@@ -34,6 +34,18 @@ Supprimer les slides inutiles avant la séance.
 
 ---
 
+## Pour rappel de la session précédente
+
+- **Session** : <numéro et titre>
+- **Ce qu'on a vu** : <2 à 3 points clés>
+- **Ce que contient `iaassistant`** : <brique ajoutée>
+
+<!--
+Deux minutes maximum. Demander si tout le monde a la brique précédente avant de continuer.
+-->
+
+---
+
 ## Objectif
 
 À la fin de la session, vous saurez :
