@@ -17,9 +17,13 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/fix-copy.js
+
 # Les slides se présentent depuis le dépôt avec Marp : elles ne sont pas publiées.
 exclude_docs: |
   sessions/*/02-slides.md
+  sessions/*/assets/
 
 markdown_extensions:
   - admonition
